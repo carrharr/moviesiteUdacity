@@ -12,11 +12,11 @@ Instructions:
 
 API KEY: 
 
-In order to get the trailers you must insert your personal youtube api key into youtubeKey variable in entertainment_center.py line 21, add it like youtubeKey = "Your Api Key" 
+In order to get the trailers you must insert your personal youtube api key into youtubeKey variable in entertainment_center.py line 10, add it like youtubeKey = "Your Api Key" 
 
 ADD MOVIE/s: 
 
-To add a movie, open entertainement_center.py, and add movies to movieList list in line 14.
+To add a movie, open entertainement_center.py, and add movies to movieList list in line 16.
 Ej: 
 movieList = ["Movie Name", "Movie Name"] 
 you want to add "The Godfather", then... 
