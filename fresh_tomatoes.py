@@ -197,7 +197,7 @@ main_page_content = '''
                 <ul class="nav navbar-nav pull-right">
                 <li>
                     <form action="" method="POST">
-                        <input type="text" name="newMovie" id="newMovie" placeholder="Enter New Movie">
+                        <input type="text" name="newMovie" id="newMovie" placeholder="Button under Dev">
                         <button type="submit" id="submit" class="btn btn-sm">Submit</button>
                     </form>
                 </li>
