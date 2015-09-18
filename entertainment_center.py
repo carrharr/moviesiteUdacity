@@ -6,7 +6,9 @@ import requests
 import json
 import config
 
-newMovie = []
+#Youtube base url and api key
+youtubeKey = ""
+ytUrl = "https://www.youtube.com/watch?v="
 
 #Movie List for display on html
 #Add movies to movieList as < ,"Movie Name" > ,excluding < & >
@@ -15,11 +17,6 @@ movieList = ["Eyes Wide Shut", "A Clockwork Orange", "Legends of the Fall",
             "The Godfather", "Blade Runner", "Her", "Scarface", "Inception",
             "Se7en", "The Walking Dead"]
 movies = []
-
-
-#Youtube base url and api key
-youtubeKey = ""
-ytUrl = "https://www.youtube.com/watch?v="
 
 #Function for retrieving info from movie names
 def getInfo(video):
