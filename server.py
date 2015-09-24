@@ -66,7 +66,9 @@ def serveSite():
 
     httpd = SocketServer.TCPServer(("", PORT), Handler)
 
-    print "@rochacbruno Python http server version 0.1 (for testing purposes only)"
-    print "Serving at: http://%(interface)s:%(port)s" % dict(interface=I or "localhost", port=PORT)
+    print "@rochacbruno Python http server version 0.1 (for testing purposes 
+          only)"
+    print "Serving at: http://%(interface)s:%(port)s" % dict(interface=I or 
+          "localhost", port=PORT)
 
     httpd.serve_forever()
