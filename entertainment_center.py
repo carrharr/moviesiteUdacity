@@ -6,21 +6,21 @@ import requests
 import json
 import config
 
-#Youtube base url and api key
+# Youtube base url and api key
 youtubeKey = ""
 ytUrl = "https://www.youtube.com/watch?v="
 
-#Movie List for display on html
-#Add movies to movieList as < ,"Movie Name" > ,excluding < & >
-#Please keep indentation
+# Movie List for display on html
+# Add movies to movieList as < ,"Movie Name" > ,excluding < & >
+# Please keep indentation
 movieList = ["Eyes Wide Shut", "A Clockwork Orange", "Legends of the Fall",
             "The Godfather", "Blade Runner", "Her", "Scarface", "Inception",
             "Se7en", "The Walking Dead"]
 movies = []
 
-#Function for retrieving info from movie names
+# Function for retrieving info from movie names
 def getInfo(video):
-    #Youtube request
+    # Youtube request
     yt = requests.get('https://www.googleapis.com/youtube/v3/search?part=s'
                            'nippet&q=' + video + 'trailer&maxResults=1&key=' +
                            youtubeKey, timeout=20)
@@ -29,12 +29,12 @@ def getInfo(video):
     vidId = ytDict['items'][0]['id']['videoId']
     vidUrl = ytUrl + vidId
 
-    #Open Movie Database request
+    # Open Movie Database request
     res = requests.get('http://www.omdbapi.com/?t=' + video + '&y=&plot='
                           'short&r=json', timeout=20)
     resStr = res.text
-    #Set dictionary values for fresh tomatoes display from Youtube and OMDB
-    #json's
+    # Set dictionary values for fresh tomatoes display from Youtube and OMDB
+    # json's
     response = json.loads(resStr)
 
     trailer_youtube_url = vidUrl
@@ -51,7 +51,7 @@ def getInfo(video):
                             trailer_youtube_url, rating, genre, director,
                              date, actors))
 
-    #Check all variables are correct!!!!
+    # Check all variables are correct!!!!
     print movie_title + " OK"
 
 
